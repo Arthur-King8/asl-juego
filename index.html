@@ -3,281 +3,225 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Juego ASL</title>
-
+  <title>NAYETH Aprende ASL Jugando</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
       background: #f9f9f9;
       color: #333;
     }
 
- #portada {
-  background: radial-gradient(circle at top left, #e0f2fe, #f8fafc);
-  padding: 5rem 2rem;
-  text-align: center;
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-  color: #1e293b;
-  animation: fadeIn 1s ease-out;
-}
-
-#portada .contenedor {
-  max-width: 700px;
-  margin: auto;
-  padding: 2rem;
-  background-color: #ffffffdd;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-#portada h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #0f172a;
-  animation: slideDown 0.8s ease-out;
-}
-
-#portada .intro {
-  font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-  font-weight: 400;
-  color: #334155;
-}
-
-#portada .manifiesto {
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 0.4rem;
-  color: #475569;
-}
-
-#portada .marca {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 1.2rem;
-  color: #64748b;
-}
-
-#portada .botones button {
-  font-size: 1rem;
-  padding: 0.7rem 1.4rem;
-  margin: 0.5rem;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-#portada .botones button:hover {
-  background-color: #1d4ed8;
-  transform: scale(1.05);
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes slideDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-
-
-   /* Pantalla de juego */
-#juego {
-  background: linear-gradient(180deg, #f1f5f9, #e2e8f0);
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
-  color: #1e293b;
-}
-
-#imagen-container img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-#imagen-container img:hover {
-  transform: scale(1.03);
-}
-
-#respuesta {
-  font-size: 1rem;
-  padding: 0.6rem;
-  width: 60%;
-  max-width: 300px;
-  margin-bottom: 1rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-}
-
-#feedback {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
-  color: #2563eb;
-}
-
-#juego button {
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  margin: 0.4rem;
-  background-color: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#juego button:hover {
-  background-color: #1d4ed8;
-}
-
-/* Pantalla de repaso */
-#repaso {
-  background: linear-gradient(180deg, #fef3c7, #fde68a);
-  padding: 3rem 2rem;
-  text-align: center;
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
-  color: #78350f;
-}
-
-#galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-#galeria div {
-  width: 180px;
-  text-align: center;
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-#galeria div:hover {
-  transform: scale(1.05);
-}
-
-#galeria img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-
-#galeria p {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #92400e;
-}
-
-#repaso button {
-  margin-top: 2rem;
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #f59e0b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#repaso button:hover {
-  background-color: #d97706;
-}
-
-    /* Repaso */
-    .repaso-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-    }
-    .repaso-item {
+    section {
+      padding: 3rem 2rem;
       text-align: center;
     }
+
+    #portada {
+      background: radial-gradient(circle at top left, #e0f2fe, #f8fafc);
+      animation: fadeIn 1s ease-out;
+    }
+
+    #portada .contenedor {
+      max-width: 700px;
+      margin: auto;
+      padding: 2rem;
+      background-color: #ffffffdd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    #portada h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0f172a;
+      animation: slideDown 0.8s ease-out;
+    }
+
+    .intro, .manifiesto, .marca {
+      margin-bottom: 0.6rem;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+
+    .manifiesto {
+      font-style: italic;
+      color: #475569;
+    }
+
+    .marca {
+      font-weight: 500;
+      color: #64748b;
+    }
+
+    .botones button {
+      font-size: 1rem;
+      padding: 0.7rem 1.4rem;
+      margin: 0.5rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .botones button:hover {
+      background-color: #1d4ed8;
+      transform: scale(1.05);
+    }
+
+    #juego {
+      background: linear-gradient(180deg, #f1f5f9, #e2e8f0);
+    }
+
+    #imagen-container img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+
+    #imagen-container img:hover {
+      transform: scale(1.03);
+    }
+
+    #respuesta {
+      font-size: 1rem;
+      padding: 0.6rem;
+      width: 60%;
+      max-width: 300px;
+      margin-bottom: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+
+    #feedback {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #2563eb;
+    }
+
+    #juego button {
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      margin: 0.4rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #juego button:hover {
+      background-color: #1d4ed8;
+    }
+
+    #repaso {
+      background: linear-gradient(180deg, #fef3c7, #fde68a);
+    }
+
+    #repaso-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .repaso-item {
+      background-color: #fff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .repaso-item:hover {
+      transform: scale(1.05);
+    }
+
     .repaso-item img {
       max-width: 100%;
       max-height: 160px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
     }
+
     .repaso-item p {
-      margin-top: 0.4rem;
+      font-size: 0.95rem;
       font-weight: bold;
-      font-size: 0.9rem;
+      color: #92400e;
+    }
+
+    #repaso button {
+      margin-top: 2rem;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #f59e0b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #repaso button:hover {
+      background-color: #d97706;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-      button {
-        width: 100%;
-      }
+      body { padding: 1rem; }
+      button { width: 100%; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Portada -->
-  <section id="portada">
-  <div class="contenedor">
-    <h1>NAYETH 🖐️ Aprende ASL Jugando</h1>
-    <p class="intro">Conecta gesto y palabra. Cada imagen representa una seña en lenguaje de señas americano (ASL).</p>
-    <p class="manifiesto">Este juego no solo enseña señas. Representa una forma de construir, validar y conectar.</p>
-    <p class="marca">Cada gesto es una palabra. Cada imagen, una intención. Cada detalle, tu marca.</p>
-    <div class="botones">
-      <button onclick="iniciarJuego()">🎮 Comenzar</button>
-      <button onclick="mostrarRepaso()">📚 Modo repaso</button>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Juego -->
   <section id="juego" style="display:none;">
     <div id="imagen-container"></div>
     <input type="text" id="respuesta" placeholder="Escribe la palabra..." autocomplete="off" />
     <button onclick="validarRespuesta()" id="validar">Validar</button>
     <p id="feedback"></p>
-    <button onclick="reiniciarJuego()" id="reiniciar">🔄 Reintentar</button>
+    <button onclick="reiniciarJuego()" id="reiniciar" style="display:none;">🔄 Reintentar</button>
     <button onclick="volverInicio()">Salir</button>
   </section>
 
-  <!-- Repaso -->
   <section id="repaso" style="display:none;">
     <h2>🧠 Repaso de señas</h2>
-    <div class="repaso-grid" id="repaso-grid"></div>
-    <!-- Obviar --> <button onclick="volverInicio()">⬅️ Volver</button>
-    <button onclick="volverInicio()">Salir</button>
+    <div id="repaso-grid"></div>
+    <button onclick="volverInicio()">⬅️ Volver</button>
   </section>
 
   <script>
     const imagenes = [
       "hello", "thank_you", "yes", "no", "please", "sorry", "good_morning", "good_night",
       "help", "bathroom", "eat", "drink", "friend", "family", "love", "school", "work",
-      "happy", "sad", "tired", "cold", "book", "sleep", "water", "danger","deaf_applause","goodbye","sing","sick"
+      "happy", "sad", "tired", "cold", "book", "sleep", "water", "danger",
+      "deaf_applause", "goodbye", "sing", "sick"
     ];
+
+    const imagenURLs = imagenes.reduce((acc, nombre) => {
+      acc[nombre] = `images/${nombre}.png`;
+      return acc;
+    }, {});
+
     let actual = 0;
 
     function mezclar(array) {
@@ -289,10 +233,14 @@
 
     function iniciarJuego() {
       mezclar(imagenes);
+      actual = 0;
       document.getElementById("portada").style.display = "none";
       document.getElementById("repaso").style.display = "none";
       document.getElementById("juego").style.display = "block";
-      actual = 0;
+      document.getElementById("respuesta").style.display = "inline-block";
+      document.getElementById("validar").style.display = "inline-block";
+      document.getElementById("reiniciar").style.display = "none";
+      document.getElementById("feedback").textContent = "";
       mostrarImagen();
     }
 
@@ -301,7 +249,7 @@
       const contenedor = document.getElementById("imagen-container");
       contenedor.innerHTML = "";
       const img = document.createElement("img");
-      img.src = `images/${nombre}.png`;
+      img.src = imagenURLs[nombre] || "https://via.placeholder.com/300x400?text=Imagen+no+disponible";
       img.alt = nombre;
       contenedor.appendChild(img);
     }
@@ -312,7 +260,7 @@
       const feedback = document.getElementById("feedback");
 
       if (input === correcto) {
-        feedback.textContent = "✅ ¡Correcto!...ahora esta nueva imagen? 👆🏼 ";
+        feedback.textContent = "✅ ¡Correcto!...ahora esta nueva imagen 👆🏼";
         actual++;
         document.getElementById("respuesta").value = "";
         if (actual < imagenes.length) {
@@ -330,13 +278,7 @@
     }
 
     function reiniciarJuego() {
-      actual = 0;
-      mezclar(imagenes);
-      document.getElementById("respuesta").style.display = "inline-block";
-      document.getElementById("validar").style.display = "inline-block";
-      document.getElementById("reiniciar").style.display = "none";
-      document.getElementById("feedback").textContent = "";
-      mostrarImagen();
+      iniciarJuego();
     }
 
     function mostrarRepaso() {
@@ -351,30 +293,22 @@
       ordenado.forEach(nombre => {
         const item = document.createElement("div");
         item.className = "repaso-item";
+        const url = imagenURLs[nombre] || "https://via.placeholder.com/300x400?text=Imagen+no+disponible";
         item.innerHTML = `
-          <img src="images/${nombre}.png" alt="${nombre}" />
+          <img src="${url}" alt="${nombre}" />
           <p>${nombre.replace(/_/g, " ")}</p>
         `;
         grid.appendChild(item);
       });
-
-
     }
 
     function volverInicio() {
       document.getElementById("juego").style.display = "none";
       document.getElementById("repaso").style.display = "none";
       document.getElementById("portada").style.display = "block";
-
-      // Limpieza visual
       document.getElementById("imagen-container").innerHTML = "";
       document.getElementById("feedback").textContent = "";
       document.getElementById("respuesta").value = "";
-
-      // Restaurar visibilidad de elementos si estaban ocultos
-      document.getElementById("respuesta").style.display = "inline-block";
-      document.getElementById("validar").style.display = "inline-block";
-      document.getElementById("reiniciar").style.display = "none";
     }
   </script>
 </body>
