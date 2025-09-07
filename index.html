@@ -206,7 +206,6 @@
       <button onclick="mostrarRepaso()">📚 Modo repaso</button>
     </div>
   </div>
-
 </section>
  
   <section id="juego" style="display:none;">
@@ -262,14 +261,13 @@
   "goodbye": "assets/goodbye.png",
   "sing": "assets/sing.png",
   "sick": "assets/sick.png"
-};
+    };
 
-    
-   <-- const imagenURLs = imagenes.reduce((acc, nombre) => {
+    const imagenURLs = imagenes.reduce((acc, nombre) => {
       acc[nombre] = `images/${nombre}.png`;
       return acc;
     }, {}); 
-    let actual = 0; -->
+    let actual = 0;
 
     function mezclar(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -360,6 +358,7 @@
   </script>
 </body>
 </html>
+
 
 
 
